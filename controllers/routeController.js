@@ -25,3 +25,18 @@ exports.showSteps = function (req, res) {
       res.render('savedSteps', {Datas:docs})
   })
 }
+exports.newSteps = function (req, res){
+  res.render('Step')
+}
+exports.stepForm = function (req, res) {
+  console.log(req.body)
+  var formd = new Todo(req.body)
+  formd.save(function (err) {
+    if (err){
+      console.log(err)
+      res.render('IncompleteInput')
+      return
+    }else{
+      res.render('ThankyouPage')
+  }})
+}

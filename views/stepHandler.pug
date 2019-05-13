@@ -1,10 +1,10 @@
-.card(id=val._id)
+.card(id=val.goal)
   if val.delete === "false"
     if val.done === "false"
       img(src="../image/x.png" height="50px" width="50px").xpng
     else
       img(src="../image/o.png" height="50px" width="50px").opng
-    a(href=`/goal/${val._id}`) #{val.goal}
+    a(href=`/goal/${val.goal}`) #{val.goal}
     button.btn.btn-primary(type='submit') delete
     
     script.

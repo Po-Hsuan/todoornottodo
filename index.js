@@ -82,8 +82,11 @@ app.get('/newgoals',routeController.newgoals)
 app.post('/goalForm',routeController.goalForm)
 //goals display
 app.get('/goals',routeController.showGoals)
+//new step
+app.get('/newStep',routeController.newSteps)
+app.post('/stepForm',routeController.stepForm)
 //step display
-app.get('/newStep',routeController.showSteps)
+app.get('/step/:goalname',routeController.showSteps)
 app.listen(port, () => console.log("online"))
 /* to commit
 1)make change, test
