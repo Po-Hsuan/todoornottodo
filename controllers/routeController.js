@@ -1,5 +1,5 @@
 var Goal = require('../models/goals.js');
-
+var Todo = require('../models/data.js')
 exports.newgoals = function (req, res){
   res.render('Goal')
 }
@@ -19,4 +19,9 @@ exports.goalForm = function (req, res) {
     }else{
       res.render('ThankyouPage')
   }})
+}
+exports.showSteps = function (req, res) {
+  Todo.find({},function (err, docs) {
+      res.render('savedSteps', {Datas:docs})
+  })
 }

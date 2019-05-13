@@ -6,3 +6,11 @@
       img(src="../image/o.png" height="50px" width="50px").opng
     a(href=`/goal/${val._id}`) #{val.goal}
     button.btn.btn-primary(type='submit') delete
+    
+    script.
+      function dateChanger(date){
+        var time = new Date(date)
+        var yearDate = time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+        document.write(`<p>${yearDate}</p>`)
+      }
+      dateChanger(`#{val.date}`);

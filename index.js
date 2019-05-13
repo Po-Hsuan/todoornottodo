@@ -79,9 +79,11 @@ app.get('/Signup', UserController.signup)
 app.post('/signingUp', UserController.signingUp)
 //new goals
 app.get('/newgoals',routeController.newgoals)
+app.post('/goalForm',routeController.goalForm)
 //goals display
 app.get('/goals',routeController.showGoals)
-app.post('/goalForm',routeController.goalForm)
+//step display
+app.get('/newStep',routeController.showSteps)
 app.listen(port, () => console.log("online"))
 /* to commit
 1)make change, test
