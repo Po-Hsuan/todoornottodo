@@ -1,0 +1,14 @@
+extends layout.pug
+block content
+  center
+    h1#login Login
+    form(method='POST' action='/logining')
+      div.form-group
+        h1
+          label(for='Username') username:
+        input#Title.form-control(type='text', placeholder='Username' name='username')
+      div.form-group
+        h1
+          label(for='Password') password:
+        input#Subtitle.form-control(type='password', placeholder='Password' name='password')
+      button.btn.btn-primary(type='submit') Send

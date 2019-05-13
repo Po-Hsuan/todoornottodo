@@ -1,0 +1,16 @@
+.card(id=val._id)
+  if val.delete === "false"
+    if val.done === "false"
+      img(src="../image/x.png" height="50px" width="50px").xpng
+    else
+      img(src="../image/o.png").opng
+    a(href=`/goal/${val._id}`) #{val.goal}
+    button.btn.btn-primary(type='submit') delete
+    
+    script.
+      function dateChanger(date){
+        var time = new Date(date)
+        var yearDate = time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+        document.write(`<p>${yearDate}</p>`)
+      }
+      dateChanger(`#{val.date}`);

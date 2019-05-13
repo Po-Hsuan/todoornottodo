@@ -1,0 +1,18 @@
+extends layout.pug
+block content
+  center
+    form(method='POST' action='/signingUp')
+        div.form-group
+          h1
+            label(for='email') Email:
+          input#email.form-control(type="email" class="form-control" name="Email" placeholder="example123@gmail.com")
+          h1
+            label(for='Username') Username:
+          input#Username.form-control(type='text', placeholder='Username' name='username')
+          h1
+            label(for='Password') password:
+          input#Password.form-control(type='password', placeholder='Password' name='password')
+          h1
+            label(for='Password2') Confirm Your Password:
+          input#Password2.form-control(minlength="8" type='password', placeholder='Password' name='password2')
+        button.btn.btn-primary(type='submit') Send

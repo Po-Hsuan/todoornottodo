@@ -1,0 +1,9 @@
+extends layout.pug
+block content
+  center
+    form(method='POST' action='/goalForm')
+        div.form-group
+          h1
+            label(for='Title') Title:
+          input#Goal.form-control(type='text', placeholder='title' name='goal')
+        button.btn.btn-primary(type='submit') Send
