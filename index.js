@@ -83,3 +83,18 @@ app.get('/newgoals',routeController.newgoals)
 app.get('/goals',routeController.showGoals)
 app.post('/goalForm',routeController.goalForm)
 app.listen(port, () => console.log("online"))
+/* to commit
+1)make change, test
+2)git add .
+3)git commit -m"...."
+4)git push origin master
+_________________or___________________
+1)press the files on the right corner
+2)stage the files, commit to master
+3)and push using the button beside files
+-------------------------------------------
+ to fetch
+ 1)git pull origin master
+ or
+ 1)git clone url
+*/
