@@ -79,7 +79,7 @@ app.get('/Signup', UserController.signup)
 app.post('/signingUp', UserController.signingUp)
 //new goals
 app.get('/newgoals',routeController.newgoals)
-//goals
+//goals display
 app.get('/goals',routeController.showGoals)
 app.post('/goalForm',routeController.goalForm)
 app.listen(port, () => console.log("online"))
