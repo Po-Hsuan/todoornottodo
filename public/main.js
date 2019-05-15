@@ -1,31 +1,28 @@
 $( document).ready(function(){
-  $( ".upvote" ).click(function(e){
-    console.log("upvote")
+  $( ".opng" ).click(function(e){
+    console.log("done")
     console.log($(e.target))
-    const postId=$(e.target)[0].dataset.id
-
+    const itemId=$(e.target)[0].dataset.id
     $.ajax({
       method:"GET",
-      url:`/upvoting/${postId}`,
+      url:`/done/${itemId}`,
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${postId} > span.upvoteNum`)[0].innerText = response.upvotes
+      $(`.card#${itemId} > `)[0].innerText = response.upvotes
     })
   })
-  $( ".downvote" ).click(function(e){
-    console.log("downvote")
-    const postId=$(e.target)[0].dataset.id
-    console.log(postId)
-    console.log($(e))
-    console.log($(e.target))
+  $( ".xpng" ).click(function(e){
+    console.log("undone")
+    const itemId=$(e.target)[0].dataset.id
+    console.log(itemId)
     $.ajax({
       method:"GET",
-      url:`/downvoting/${postId}`,
+      url:`/undone/${itemId}`,
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${postId} > span.downvoteNum`)[0].innerText = response.downvote
+      $(`.card#${itemId} > `)[0].innerText = response.downvote
     })
   })
 })

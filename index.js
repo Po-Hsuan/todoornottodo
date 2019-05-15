@@ -4,7 +4,7 @@ const path = require('path')
 const port = 3000
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/webapp');
+mongoose.connect('mongodb://localhost:27017/todornottodo');
 var userID = require('./models/user.js');
 const bodyParser = require('body-parser');
 const querystring = require('querystring');
@@ -87,6 +87,8 @@ app.get('/newStep',routeController.newSteps)
 app.post('/stepForm',routeController.stepForm)
 //step display
 app.get('/goal/:goalname',routeController.showSteps)
+app.get('/done/:itemId',routeController.done)
+app.get('/undone/:itemId',routeController.undone)
 app.listen(port, () => console.log("online"))
 /* to commit
 1)make change, test
