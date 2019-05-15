@@ -30,8 +30,8 @@ exports.newSteps = function (req, res){
 }
 exports.stepForm = function (req, res) {
   console.log(req.body)
-  var formd = new Todo(req.body)
-  formd.save(function (err) {
+  var forms = new Todo(req.body)
+  forms.save(function (err) {
     if (err){
       console.log(err)
       res.render('IncompleteInput')
