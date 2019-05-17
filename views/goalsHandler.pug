@@ -1,5 +1,5 @@
-.card(id=val._id)
-  if val.delete === "false"
+if val.delete === "false"
+  .card(id=val._id)
     if val.done === "false"
       img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xgoal
     else
