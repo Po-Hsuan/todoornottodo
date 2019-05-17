@@ -1,9 +1,9 @@
 .card(id=val._id)
   if val.delete === "false"
     if val.done === "false"
-      img(src="../image/x.png" height="50px" width="50px").xpng
+      img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xstep
     else
-      img(src="../image/o.png" height="50px" width="50px").opng
+      img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ostep
     h2(id=val.item)  #{val.item}
     button.btn.btn-primary(type='submit') delete
     

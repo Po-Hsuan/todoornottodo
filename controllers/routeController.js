@@ -45,18 +45,20 @@ exports.done = function (req, res){
   Todo.findById(req.params.id, function(err, item){
     if (err){
       console.log(err)
+      return
     }
     if (item === null){
       console.log("step not found.")
+      return
     }
     item.done="true"
     item.save(function(error, itemAfterSave){
       if (error){
         console.log(error)
-        res.json({error:"abort, something ain't done"})
+        res.json({error:"you had one job, and you didn't do it!!!"})
         return
       }
-        res.json({sucess:"done",done:itemAfterSave.item})
+        res.json({sucess:"done"})
     })
   })
 }
@@ -65,18 +67,20 @@ exports.undone = function (req, res){
   Todo.findById(req.params.id, function(err, item){
     if (err){
       console.log(err)
+      return
     }
     if (item === null){
       console.log("step not found.")
+      return
     }
     item.done="false"
     item.save(function(error, itemAfterSave){
       if (error){
         console.log(error)
-        res.json({error:"abort, something is done"})
+        res.json({error:"you had one job and you nailed it"})
         return
       }
-        res.json({sucess:"undone",done:itemAfterSave.item})
+        res.json({sucess:"undone"})
     })
   })
 }

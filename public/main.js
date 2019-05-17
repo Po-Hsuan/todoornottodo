@@ -1,28 +1,30 @@
 $( document).ready(function(){
-  $( ".opng" ).click(function(e){
+  $( ".xstep" ).click(function(e){
     console.log("done")
-    console.log($(e.target))
+    console.log($(e.target)[0].dataset.id)
     const itemId=$(e.target)[0].dataset.id
+
     $.ajax({
       method:"GET",
       url:`/done/${itemId}`,
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${itemId} > `)[0].innerText = response.upvotes
+      $(`.card#${itemId} > .xstep`)[0].innerHTML = `img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ostep`
     })
   })
-  $( ".xpng" ).click(function(e){
+  $( ".ostep" ).click(function(e){
     console.log("undone")
+    console.log($(e.target)[0].dataset.id)
     const itemId=$(e.target)[0].dataset.id
-    console.log(itemId)
+
     $.ajax({
       method:"GET",
       url:`/undone/${itemId}`,
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${itemId} > `)[0].innerText = response.downvote
+      $(`.card#${itemId} > .ostep`)[0].innerHTML = `img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xstep`
     })
   })
 })

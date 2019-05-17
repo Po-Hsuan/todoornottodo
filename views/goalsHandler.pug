@@ -1,8 +1,8 @@
 .card(id=val._id)
   if val.delete === "false"
     if val.done === "false"
-      img(src="../image/x.png" height="50px" width="50px").xpng
+      img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xgoal
     else
-      img(src="../image/o.png" height="50px" width="50px").opng
+      img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ogoal
     a(href=`/goal/${val.goal}`) #{val.goal}
     button.btn.btn-primary(type='submit') delete
