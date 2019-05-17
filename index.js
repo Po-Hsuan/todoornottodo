@@ -89,6 +89,7 @@ app.post('/stepForm',routeController.stepForm)
 app.get('/goal/:goalname',routeController.showSteps)
 app.get('/done/:itemId',routeController.done)
 app.get('/undone/:itemId',routeController.undone)
+app.get('/delete/:itemId',routeController.delete)
 app.listen(port, () => console.log("online"))
 /* to commit
 1)make change, test

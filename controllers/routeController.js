@@ -84,3 +84,25 @@ exports.undone = function (req, res){
     })
   })
 }
+exports.delete = function (req, res){
+  console.log("delete")
+  Todo.findById(req.params.id, function(err, item){
+    if (err){
+      console.log(err)
+      return
+    }
+    if (item === null){
+      console.log("step/goal not found.")
+      return
+    }
+    item.delete="true"
+    item.save(function(error, itemAfterSave){
+      if (error){
+        console.log(error)
+        res.json({error:"system error"})
+        return
+      }
+        res.json({sucess:"undone"})
+    })
+  })
+}

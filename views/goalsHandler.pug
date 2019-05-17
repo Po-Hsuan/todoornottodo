@@ -5,4 +5,4 @@
     else
       img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ogoal
     a(href=`/goal/${val.goal}`) #{val.goal}
-    button.btn.btn-primary(type='submit') delete
+    button.btn.btn-primary.delete(data-id=val._id) delete
