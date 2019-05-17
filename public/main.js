@@ -10,7 +10,7 @@ $( document).ready(function(){
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${itemId} > .xstep`)[0].innerHTML = `img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ostep`
+      $(`.card#${itemId} > h1.img`)[0].innerHTML = `<img class="ostep" src="../image/o.png" height="50px" width="50px" data-id=val._id class="ostep">`
     })
   })
   $( ".ostep" ).click(function(e){
@@ -24,7 +24,7 @@ $( document).ready(function(){
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${itemId} > .ostep`)[0].innerHTML = `img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xstep`
+      $(`.card#${itemId} > h1.img`)[0].innerHTML = `<img class="xstep" src="../image/x.png" height="50px" width="50px" data-id=val._id>`
     })
   })
   $( ".delete" ).click(function(e){

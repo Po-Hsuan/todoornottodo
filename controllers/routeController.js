@@ -42,7 +42,7 @@ exports.stepForm = function (req, res) {
 }
 exports.done = function (req, res){
   console.log("done with goal")
-  Todo.findById(req.params.id, function(err, item){
+  Todo.findById(req.params.itemId, function(err, item){
     if (err){
       console.log(err)
       return
@@ -64,7 +64,7 @@ exports.done = function (req, res){
 }
 exports.undone = function (req, res){
   console.log("undone with goal")
-  Todo.findById(req.params.id, function(err, item){
+  Todo.findById(req.params.itemId, function(err, item){
     if (err){
       console.log(err)
       return
@@ -86,7 +86,7 @@ exports.undone = function (req, res){
 }
 exports.delete = function (req, res){
   console.log("delete")
-  Todo.findById(req.params.id, function(err, item){
+  Todo.findById(req.params.itemId, function(err, item){
     if (err){
       console.log(err)
       return
