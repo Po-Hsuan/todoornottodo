@@ -4,13 +4,17 @@ exports.newgoals = function (req, res){
   res.render('Goal')
 }
 exports.showGoals = function (req, res) {
-  Goal.find({},function (err, docs) {
+  Goal.find({userId:req.user._id},function (err, docs) {
       res.render('savedGoals', {Datas:docs})
   })
 }
 exports.goalForm = function (req, res) {
+  console.log(req.user)
   console.log(req.body)
-  var formd = new Goal(req.body)
+  var formd = new Goal({
+    ...req.body,
+    userId: req.user._id
+  })
   formd.save(function (err) {
     if (err){
       console.log(err)
