@@ -12,6 +12,6 @@ if val.delete === "false"
       function dateChanger(date){
         var time = new Date(date)
         var yearDate = time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
-        document.write(`<p>${yearDate}</p>`)
+        document.write(`<h2>${yearDate}</h2>`)
       }
       dateChanger(`#{val.dueDate}`);
