@@ -89,10 +89,10 @@ app.post('/stepForm',routeController.stepForm)
 app.get('/goal/:goalname',routeController.showSteps)
 app.get('/done/:itemId',routeController.done)
 app.get('/undone/:itemId',routeController.undone)
-app.get('/done/:goalId',routeController.donegoal)
-app.get('/undone/:goalId',routeController.undonegoal)
+app.get('/donegoal/:goalId',routeController.donegoal)
+app.get('/undonegoal/:goalId',routeController.undonegoal)
 app.get('/delete/:itemId',routeController.delete)
-app.get('/delete/:goalId',routeController.deletegoal)
+app.get('/deletegoal/:goalId',routeController.deletegoal)
 app.listen(port, () => console.log("online"))
 /* to commit
 1)make change, test

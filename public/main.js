@@ -34,7 +34,7 @@ $( document).ready(function(){
 
     $.ajax({
       method:"GET",
-      url:`/done/${goalId}`,
+      url:`/donegoal/${goalId}`,
     })
     .done(function(response){
       console.log(response)
@@ -48,7 +48,7 @@ $( document).ready(function(){
 
     $.ajax({
       method:"GET",
-      url:`/undone/${goalId}`,
+      url:`/undonegoal/${goalId}`,
     })
     .done(function(response){
       console.log(response)
@@ -76,7 +76,7 @@ $( document).ready(function(){
 
     $.ajax({
       method:"GET",
-      url:`/delete/${goalId}`,
+      url:`/deletegoal/${goalId}`,
     })
     .done(function(response){
       console.log(response)
