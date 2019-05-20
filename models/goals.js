@@ -6,7 +6,6 @@ var goalSchema = new Schema({
   done:{type: String, default: "false"},
   delete:{type: String, default: "false"},
   userId:{type: String},
-  dataIds:{type: Array},
 });
 
 var Goal = mongoose.model('Goal',goalSchema);
