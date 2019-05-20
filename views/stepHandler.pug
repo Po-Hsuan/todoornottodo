@@ -6,6 +6,12 @@ if val.delete === "false"
     else
       h1.img
         img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ostep
-    h2(id=val.item)  #{val.item}
+    h2  #{val.item}
     button.btn.btn-primary.delete(data-id=val._id) delete
-    
+    script.
+      function dateChanger(date){
+        var time = new Date(date)
+        var yearDate = time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+        document.write(`<p>${yearDate}</p>`)
+      }
+      dateChanger(`#{val.dueDate}`);
