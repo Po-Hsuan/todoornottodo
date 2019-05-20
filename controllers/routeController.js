@@ -86,13 +86,13 @@ exports.undone = function (req, res){
 }
 exports.donegoal = function (req, res){
   console.log("done with goal")
-  Todo.findById(req.params.goalId, function(err, item){
+  Goal.findById(req.params.goalId, function(err, item){
     if (err){
       console.log(err)
       return
     }
     if (item === null){
-      console.log("step not found.")
+      console.log("goal not found.")
       return
     }
     item.done="true"
@@ -108,13 +108,13 @@ exports.donegoal = function (req, res){
 }
 exports.undonegoal = function (req, res){
   console.log("undone with goal")
-  Todo.findById(req.params.goalId, function(err, item){
+  Goal.findById(req.params.goalId, function(err, item){
     if (err){
       console.log(err)
       return
     }
     if (item === null){
-      console.log("step not found.")
+      console.log("goal not found.")
       return
     }
     item.done="false"
