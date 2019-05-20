@@ -78,15 +78,16 @@ app.post('/logining',
 app.get('/Signup', UserController.signup)
 app.post('/signingUp', UserController.signingUp)
 //new goals
-app.get('/newgoals',routeController.newgoals)
+app.get('/newgoals', LoginYet,routeController.newgoals)
 app.post('/goalForm',routeController.goalForm)
 //goals display
-app.get('/goals',routeController.showGoals)
+app.get('/goals', LoginYet,routeController.showGoals)
 //new step
-app.get('/newStep',routeController.newSteps)
+app.get('/newStep', LoginYet,routeController.newSteps)
 app.post('/stepForm',routeController.stepForm)
 //step display
-app.get('/goal/:goalname',routeController.showSteps)
+app.get('/goal/:goalname', LoginYet,routeController.showSteps)
+//done
 app.get('/done/:itemId',routeController.done)
 app.get('/undone/:itemId',routeController.undone)
 app.get('/donegoal/:goalId',routeController.donegoal)
