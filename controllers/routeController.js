@@ -25,7 +25,7 @@ exports.goalForm = function (req, res) {
   }})
 }
 exports.showSteps = function (req, res) {
-  Todo.find({"goal":req.params.goalname},function (err, docs) {
+  Todo.find({"goal":req.params.goalname, userId:req.user._id},function (err, docs) {
       res.render('savedSteps', {Datas:docs})
   })
 }
@@ -34,7 +34,10 @@ exports.newSteps = function (req, res){
 }
 exports.stepForm = function (req, res) {
   console.log(req.body)
-  var forms = new Todo(req.body)
+  var forms = new Todo({
+    ...req.body,
+    userId: req.user._id
+  })
   forms.save(function (err) {
     if (err){
       console.log(err)

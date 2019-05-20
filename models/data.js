@@ -7,6 +7,7 @@ dueDate:{type: Date, required: true},
 done:{type: String, default: "false"},
 delete:{type: String, default: "false"},
 goal:{type: String, required: true},
+userId:{type: String},
 });
 
 var Todo = mongoose.model('Todo',dataSchema);
