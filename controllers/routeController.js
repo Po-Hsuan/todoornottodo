@@ -84,6 +84,50 @@ exports.undone = function (req, res){
     })
   })
 }
+exports.donegoal = function (req, res){
+  console.log("done with goal")
+  Todo.findById(req.params.goalId, function(err, item){
+    if (err){
+      console.log(err)
+      return
+    }
+    if (item === null){
+      console.log("step not found.")
+      return
+    }
+    item.done="true"
+    item.save(function(error, itemAfterSave){
+      if (error){
+        console.log(error)
+        res.json({error:"you had one job, and you didn't do it!!!"})
+        return
+      }
+        res.json({sucess:"done"})
+    })
+  })
+}
+exports.undonegoal = function (req, res){
+  console.log("undone with goal")
+  Todo.findById(req.params.goalId, function(err, item){
+    if (err){
+      console.log(err)
+      return
+    }
+    if (item === null){
+      console.log("step not found.")
+      return
+    }
+    item.done="false"
+    item.save(function(error, itemAfterSave){
+      if (error){
+        console.log(error)
+        res.json({error:"you had one job and you nailed it"})
+        return
+      }
+        res.json({sucess:"undone"})
+    })
+  })
+}
 exports.delete = function (req, res){
   console.log("delete")
   Todo.findById(req.params.itemId, function(err, item){
@@ -92,7 +136,29 @@ exports.delete = function (req, res){
       return
     }
     if (item === null){
-      console.log("step/goal not found.")
+      console.log("step not found.")
+      return
+    }
+    item.delete="true"
+    item.save(function(error, itemAfterSave){
+      if (error){
+        console.log(error)
+        res.json({error:"system error"})
+        return
+      }
+        res.json({sucess:"undone"})
+    })
+  })
+}
+exports.deletegoal = function (req, res){
+  console.log("delete goal")
+  Goal.findById(req.params.goalId, function(err, item){
+    if (err){
+      console.log(err)
+      return
+    }
+    if (item === null){
+      console.log("goal not found.")
       return
     }
     item.delete="true"
