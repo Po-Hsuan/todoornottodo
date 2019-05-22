@@ -1,45 +1,49 @@
 h1{
   font-size: 50px;
-	color: yellow;
+	color: #5697cc;
+}
+h2{
+  font-size: 25px;
+	color: #a1ea80;
+}
+h3{
+  font-size: 20px;
+	color: #a1ea80;
 }
 #title, #url2, #picture2, #Subtitle, #Picked,#email,#username,#password,#Password2{
   width: 400px
 }
 body{
-  background-image: url("image/download.png");
+  background-color: #c8c8ea;
 }
 #text2{
-  width: 500px;
+  width: 550px;
   height: 150px;
   resize: vertical;
 }
 p,div{
-  font-size: 12px;
-	color: yellow;
+  font-size: 17px;
+	color: #5697cc;
 }
 nav{
-  background-color: orange;
+  background-color: #c880ea;
 }
 a{
   font-size: 25px;
 }
 #text3{
-  width: 500px;
+  width: 550px;
   height: 150px;
   resize: none;
 }
 #login{
   font-size: 150px;
-  color: #ff9400;
+  color: #5697cc;
   font-family: Chalkduster;
 }
 
-#downvote{
-   width: 48px;
-   height: 39px;
-}
 .card{
-  background-color: #8f00ff;
+  background-color: #c880ea;
   min-width: 500px;
   margin-top: 10px;
   margin-left: 100px;
@@ -49,14 +53,7 @@ a{
   font-size: 100px;
 }
 
-.upvote{
-  margin-right: 50px;
-  margin-top: 5px;
-  /* width: 61px;
-  height: 38px; */
-}
-.downvote{
-  margin-top: 5px;
-  /* width: 61px;
-  height: 38px; */
+#Goal{
+  width: 40%;
+  height: 50px;
 }
