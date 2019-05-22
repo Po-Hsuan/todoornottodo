@@ -1,17 +1,17 @@
 if val.delete === "false"
   .card(id=val._id) 
     if val.done === "false"
-      h1.img
+      div.img
         img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xstep
     else
-      h1.img
+      div.img
         img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ostep
-    h2  #{val.item}
+    h2.goal  #{val.item}
     button.btn.btn-primary.delete(data-id=val._id) delete
     script.
       function dateChanger(date){
         var time = new Date(date)
         var yearDate = time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
-        document.write(`<h3>${yearDate}</h3>`)
+        document.write(`<h3 class="goal">Due date:${yearDate}</h3>`)
       }
       dateChanger(`#{val.dueDate}`);

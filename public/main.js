@@ -10,7 +10,7 @@ $( document).ready(function(){
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${itemId} > h1.img`)[0].innerHTML = `<img class="ostep" src="../image/o.png" height="50px" width="50px" data-id=${itemId}>`
+      $(`.card#${itemId} > div.img`)[0].innerHTML = `<img class="ostep" src="../image/o.png" height="50px" width="50px" data-id=${itemId}>`
     })
   })
   $( ".ostep" ).click(function(e){
@@ -24,7 +24,7 @@ $( document).ready(function(){
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${itemId} > h1.img`)[0].innerHTML = `<img class="xstep" src="../image/x.png" height="50px" width="50px" data-id=${itemId}>`
+      $(`.card#${itemId} > div.img`)[0].innerHTML = `<img class="xstep" src="../image/x.png" height="50px" width="50px" data-id=${itemId}>`
     })
   })
   $( ".xgoal" ).click(function(e){
@@ -38,7 +38,7 @@ $( document).ready(function(){
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${goalId} > h1.img`)[0].innerHTML = `<img class="ogoal" src="../image/o.png" height="50px" width="50px" data-id=${goalId}>`
+      $(`.card#${goalId} > div.img`)[0].innerHTML = `<img class="ogoal" src="../image/o.png" height="50px" width="50px" data-id=${goalId}>`
     })
   })
   $( ".ogoal" ).click(function(e){
@@ -52,7 +52,7 @@ $( document).ready(function(){
     })
     .done(function(response){
       console.log(response)
-      $(`.card#${goalId} > h1.img`)[0].innerHTML = `<img class="xgoal" src="../image/x.png" height="50px" width="50px" data-id=${goalId}>`
+      $(`.card#${goalId} > div.img`)[0].innerHTML = `<img class="xgoal" src="../image/x.png" height="50px" width="50px" data-id=${goalId}>`
     })
   })
   $( ".delete" ).click(function(e){

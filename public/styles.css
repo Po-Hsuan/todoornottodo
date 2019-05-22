@@ -48,6 +48,8 @@ a{
   margin-top: 10px;
   margin-left: 100px;
   margin-right: 100px;
+  justify-content: center;
+  flex-direction: row;
 }
 #card{
   font-size: 100px;
@@ -56,4 +58,8 @@ a{
 #Goal{
   width: 40%;
   height: 50px;
+}
+.goal{
+  margin-left: 20px;
+  margin-right: 20px;
 }

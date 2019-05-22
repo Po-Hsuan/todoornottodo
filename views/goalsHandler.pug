@@ -1,10 +1,9 @@
 if val.delete === "false"
   .card(id=val._id)
-    if val.done === "false"
-      h1.img
+    div.img
+      if val.done === "false"
         img(src="../image/x.png" height="50px" width="50px" data-id=val._id).xgoal
-    else
-      h1.img
+      else
         img(src="../image/o.png" height="50px" width="50px" data-id=val._id).ogoal
-    a(href=`/goal/${val.goal}`) #{val.goal}
+    a.goal(href=`/goal/${val.goal}`) #{val.goal}
     button.btn.btn-primary.deletegoal(data-id=val._id) delete
